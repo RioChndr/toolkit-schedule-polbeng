@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Mata Kuliah</title>
     <style>
         .text-green{
@@ -211,5 +212,5 @@
 <script src="js/vue.min.js"></script>
 <!-- <script src="js/scrool-toVue.js"></script> -->
 
-<script src='js/app.js'></script>
+<script src='js/app2.js'></script>
 </html>
