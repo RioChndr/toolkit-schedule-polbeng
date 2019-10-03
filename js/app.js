@@ -14,6 +14,7 @@ var myapp = new Vue({
         inputFilterRoom: null,
         isCariDosen:false,
         isCariRuangan:false,
+        showRoomEmpty:false,
         isLoading:"",
         view:"",
         treefindingDosen :[],
@@ -199,8 +200,9 @@ var myapp = new Vue({
                     if (this.dataRoomUsed.hasOwnProperty(ruangan)) {
                         const data = this.dataRoomUsed[ruangan];
                         if(ruangan.match(new RegExp("\\b"+this.inputFilterRoom+".*", "i"))){
-                            if(this.showRoomEmpty == true){
-                                if(ruangan.isFilled == false){
+                            if(this.showRoomEmpty){
+                                console.log("check");
+                                if(data.isFIlled == false){
                                     newData[ruangan] = data;
                                 }
                             }else{
@@ -211,7 +213,19 @@ var myapp = new Vue({
                     }
                 }
             }else{
-                return this.dataRoomUsed;
+                if(this.showRoomEmpty){
+                    for (const ruangan in this.dataRoomUsed) {
+                        if (this.dataRoomUsed.hasOwnProperty(ruangan)) {
+                            const data = this.dataRoomUsed[ruangan];
+                            if(data.isFIlled == false){
+                                newData[ruangan] = data;
+                            }
+                                
+                        }
+                    }
+                }else{
+                    newData = this.dataRoomUsed;
+                }
             }
             return newData;
         }

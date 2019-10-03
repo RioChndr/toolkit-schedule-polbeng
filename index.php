@@ -101,7 +101,11 @@
             </div>
             <div v-if="view == 'isCariRuangan'" id='list_ruangan' class='mt-3'>
                     Status Ruangan Kampus : <br>
+                    <input type="checkbox" v-model='showRoomEmpty' value='true' > <span id="btnCheckbox1"> Tampilkan ruangan kosong saja</span>
+                    <br>
+
                     <input type="text" v-model='inputFilterRoom' placeholder="Filter ruangan ...">
+
                     <!-- {{dataRoomUsed}} -->
                     <ul>
                         <li v-for='(val, namaRuangan, index) in filterRuangan'>
