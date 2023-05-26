@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/html":{"mount_options":["dmode=777","fmode=666","uid=1000","gid=1000","_netdev"],"guestpath":"/var/www/html","hostpath":"D:/project/Rio Project/toolkit-schedule-polbeng/src","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/project/Rio Project/toolkit-schedule-polbeng","disabled":false,"__vagrantfile":true}}}
